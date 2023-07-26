@@ -2,8 +2,7 @@
 🐋 Fully-Dockerised Nextjs - postgress development in Visual Studio Code
 ### Next.js & Postgress Development Containers for Visual Studio Code
 
-`nextjs-devcontainer` is a simple configuration to support fully-dockerised development of Laravel applications using Visual Studio Code.
-Unlike Laravel Sail, `nextjs-devcontainer` has been built so that the entire development experience is dockerised. The only requirements are:
+`nextjs-devcontainer` is a simple configuration to support fully-dockerised development of Next.js applications using Visual Studio Code.
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Visual Studio Code Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
