@@ -20,14 +20,14 @@ services:
   next:
     container_name: next-app
     build:
-      context: ../..
-      dockerfile: dev/containers/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
     ports:
       - "3000:3000"
     volumes:
-      - ../..:/next
+      - ../:/next
       - /next/node_modules
       - /next/.git
 

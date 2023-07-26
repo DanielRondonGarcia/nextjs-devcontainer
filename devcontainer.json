@@ -5,7 +5,7 @@
 {
     "name": "next.js",
     "dockerComposeFile": [
-        "./docker-compose.yml"
+        "docker-compose.yml"
     ],
     "forwardPorts": [3000, 3001],
     "service": "next",
