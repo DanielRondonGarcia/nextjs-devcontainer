@@ -1,0 +1,36 @@
+# -- DEV DOCKER-COMPOSE --
+# -- DO NOT USE IN PRODUCTION! --
+
+version: "3"
+services:
+  db:
+    container_name: next-db
+    image: postgres:14.1-alpine
+    environment:
+      POSTGRES_DB: next
+      POSTGRES_PASSWORD: uHJS5xwD4oAZDXUb
+      POSTGRES_USER: nextjs
+    logging:
+      driver: "none"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  next:
+    container_name: next-app
+    build:
+      context: ../..
+      dockerfile: dev/containers/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../..:/next
+      - /next/node_modules
+      - /next/.git
+
+
+volumes:
+  db-data:
